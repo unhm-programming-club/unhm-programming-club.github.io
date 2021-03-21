@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Meeting 0003 Results"
+title:  "Meeting 0002 Results"
 date:   2021-03-20 14:56:45 -0400
 author: Karl Miller
+tags: meeting-results
 ---
 {% include programming_club_logo.html %}
 
@@ -10,7 +11,7 @@ author: Karl Miller
 
 - Karl Miller, President,
 - Adam Morvant, Discord Administrator,
-- Kaitlyn McManus, Secretary,
+- Kaitlin McManus, Secretary,
 - Bryan Robbins, Trustee,
 - Derek Santiago, Trustee
 
