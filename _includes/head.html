@@ -7,7 +7,7 @@
   <link rel="canonical" href="{{ site.url }}{{site.baseurl}}{{ page.url }}" />
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   {%- feed_meta -%}
-  {%- if jekyll.environment == 'development' -%}
+  {%- if jekyll.environment == 'production' -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
   {% include external-scripts.html %}
