@@ -1,8 +1,9 @@
-- name: Home
-  link: /
 - name: About
   link: /about
-- name: Blog
-  link: /blog.html
+  num: 3
+- name: Meetings
+  link: /meeting-results.html
+  num: 1
 - name: Authors
   link: /authors.html
+  num: 2

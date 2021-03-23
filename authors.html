@@ -10,6 +10,15 @@ title: Authors
         <h2>{{author.name}}</h2>
         <h3>{{author.position}}</h3>
         <p>{{author.content | markdownify }}</p>
+        {% if author.website %}
+        <p>Website: <a href={{author.website}}>{{author.website}}</a></p>
+        {% endif %}
+        {% if author.github %}
+        <p>Github: <a href="https://www.github.com/{{author.github}}">{{author.github}}</a> </p>
+        {% endif %}
+        {% if author.email %}
+        <p>Email: <a href="{{author.email}}">{{author.email}}</a></p>
+        {% endif %}
     </li>
     {% endfor %}
 </ul>
