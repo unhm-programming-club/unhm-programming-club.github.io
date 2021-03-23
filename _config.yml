@@ -25,6 +25,7 @@ baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  unhm-programming-club
+google_analytics: true
 
 # Build settings
 theme: minima
