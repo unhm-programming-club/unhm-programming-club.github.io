@@ -6,6 +6,4 @@ layout: home
 title: Home
 ---
 
-{% include programming_club_logo.html %}
-
-Welcome to the website of the Programming club. Here you will find records of meetings and posts by members.
+![A picture of a computer with a colorful screen, with 'UNHM Programming Club on it']({{site.baseurl}}/assets/images/logo-temporary.png "A picture of a computer with a colorful screen, with 'UNHM Programming Club on it'")
