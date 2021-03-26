@@ -6,7 +6,7 @@ author: Karl Miller
 tags: club-goals 
 ---
 
-In order to achieve our mission statement goals, I believe it useful to explain how I think we can achieve them by describing specific policies I suggest we implement. While I started the ball rolling on this organization and you have elected me to serve as the first President, this club belongs to all of us, and nothing in this statement should be construed as club policy until approved via democratic process.
+In order to accomplish our mission statement goals, I think it useful to explain how I believe we can achieve them by describing specific policies I suggest we implement. While I started the ball rolling on this organization and you have elected me to serve as the first President, this club belongs to all of us, and nothing in this statement should be construed as club policy until approved via democratic process.
 
 # Table Of Contents
 1. [A freewheeling, decentralized, network of programmatic cooperation](#A-freewheeling-decentralized-network-of-programmatic-cooperation)
