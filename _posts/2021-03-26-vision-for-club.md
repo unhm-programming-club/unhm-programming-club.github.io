@@ -17,7 +17,7 @@ In order to accomplish our mission statement goals, I think it useful to explain
 1. [Role of The Board](#role-of-the-board)
 1. [Conclusion](#conclusion)
 
-# A freewheeling, decentralized, network of programmatic cooperation
+# A freewheeling, decentralized network of programmatic cooperation
 
 I believe the best club we can create will steward an environment that encourages and allows initiative, where our membership is not limited to pursuing only specific projects approved by officers. Different students have different interests and expertise, and we will thrive when those are unleashed with only the barest of constraints neccessary to ensure members aren't doing something illegal or amoral.
 
