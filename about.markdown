@@ -6,9 +6,9 @@ permalink: /about/
 
 ## Why You Should Join This Club
 
-Our degree is worth what we put into it, what we choose to learn, what connections we strive to make. We can learn a lot in our classes and from our professors, but there are some important things do not get as much classroom time. For one, in class, most programming is done solo. But in a professional setting, we will always be working in a group.
+Our degree is worth what we put into it, what we choose to learn, what connections we strive to make. We can learn much in our classes and from our professors, but there are important things that do not get as much classroom time. For one, in class, most programming is done solo. But in a professional setting, we will always be working in a group.
 
-It is to your advantage to build skills that will help you to land a great job and thrive in the professional world. Foremost among those skills are teamwork, organization, and peer programming. Our degree curriculum are limited in how much time they devote to these important areas. This club will fill those gaps and level up those skills as we collaborate on cool projects. It will help us connect with each other and others in the field. It will expose us to new strategies for approaching software development. It will inform us about events, like hackathons, where we can network with professionals in the field. It will expose us to resources and technologies we can add to our arsenal, and provide us experience in the actual languages and libraries employers are looking for their candidates to be proficient in.
+It is to your advantage to build skills that will help you to land a great job and thrive in the professional world. Foremost among those skills are teamwork, organization, and programming on a shared project. Our degree curriculum are limited in how much time they devote to these important areas. This club will fill those gaps and level up those skills as we collaborate on cool projects. It will help us connect with each other and others in the field. It will expose us to new strategies for approaching software development. It will inform us about events, like hackathons, where we can network with professionals in the field. It will expose us to resources and technologies we can add to our arsenal, and provide us experience in the actual languages and libraries employers are looking for their candidates to be proficient in.
 
 It will provide the opportunity to learn invaluable, employment-ready skills not easily acquired by simply attending classes.
 
@@ -20,9 +20,17 @@ Even in contributing to group projects, there will be plenty of ways to help tha
 
 # What are the membership requirements?
 
-The membership requirements have not yet been finalized. The first meeting of the UNHM Programming Club was held on March 13th, 2021, and we still have to draft and ratify our constitution, elect a full slate of officers, and decide on a faculty advisor before we can become an official UNHM organization.
+Members must join the GitHub team and create 1 pull request on Github per semester. It does not have to be code - contributing a single word of content is a valid contribution as well. The purpose of this requirement is to ensure everyone is _able_ to use Git; whether you want to contribute more is up to you.
 
-For now, if you show up to the meeting, you are a member!
+Pull requests are hard to figure out! Talk to us in the Discord so we can walk you through the process. We will also publish a guide soon.
+
+You must also be a student at UNH. Officers must attent UNH Manchester but membership is open to both campuses. Members can retain membership (but not officer roles) for up to 2 years after graduating or transferring. 
+
+# What are the membership privileges?
+
+Any member may create any project that does not violate our conduct requirements and does not do anything illegal. That member will be vested with leadership of that project. They have the right to recruit collaborators on the Discord and all other club platforms.
+
+Any member may join an existing project. The project leader should include them in team discussions and strive to find ways they can contribute appropriate to their skill level.
 
 # How do I get in touch?
 
