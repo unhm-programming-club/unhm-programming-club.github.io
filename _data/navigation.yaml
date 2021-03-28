@@ -1,9 +1,9 @@
 - name: About
   link: /about
-  num: 3
+  num: 1
 - name: Meetings
   link: /meeting-results.html
-  num: 1
-- name: Authors
-  link: /authors.html
   num: 2
+- name: Home
+  link: /l
+  num: 3

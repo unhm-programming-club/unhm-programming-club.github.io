@@ -43,6 +43,6 @@ tags: meeting-results
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Eik1W5PJkdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### On the Agenda Next Meeding
+### On the Agenda Next Meeting
 
 _to be determined_
