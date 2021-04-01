@@ -45,4 +45,16 @@ tags: meeting-results
 
 ### On the Agenda Next Meeting
 
-_to be determined_
+- Introductions / New Members
+- Status of constitution
+- Discuss whether to vote for faculty advisor
+- Discuss status of pull requests
+- Discuss status of Discord
+  - getting all new joinees to start on the welcome channel
+  - having new joinees acknowledge rules and send member info to bot or otherwise so we can invite them to Github team
+  - other channel ideas - off-topic, memes
+- Discuss having non-members in Discord
+- Discuss ongoing projects
+- Discuss doing meeting on Discord, moving to once every 2 weeks
+- Discuss how best to get people engaged with a Pull request
+- Discuss how to manage member information
