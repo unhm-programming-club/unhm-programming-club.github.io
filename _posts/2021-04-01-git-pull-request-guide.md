@@ -6,7 +6,9 @@ author: Karl Miller
 tags: tutorials
 ---
 
-The only requirement of membership in the Programming Club, besides following our conduct rules, is that every member must make a Pull Request on GitHub on a [club repository](https://github.com/unhm-programming-team/) once per semester.
+The only requirement of membership in the Programming Club, besides following our conduct rules, is that every member must make a Pull Request on GitHub on a [club repository](https://github.com/unhm-programming-team/) **once per semester**.
+
+A Pull request is an action performed on GitHub.com where someone requests that changes they made to a copy of a project be added to the original project.
 
 Making a pull request is a little complicated, especially the first time. It involves a mixture of command line actions and interacting with the user interface on GitHub.com. 
 
@@ -15,6 +17,19 @@ This guide will instruct on how to make a simple, content-related pull request o
 Once you have Git installed and have a GitHub account, the process is this:
 
 _fork - clone - edit - push - pull request_
+
+### Table of Contents
+
+1. [Download Git and Create a GitHub Account](#1---download-git-and-create-a-github-account)
+2. [Add Git to the Path](#2---add-git-to-the-path)
+3. [Configure Git by adding Username and Email](#3---configure-git-by-adding-user-name-and-email)
+4. [Fork (copy) the Repository on GitHub](#4---fork-the-repository-on-github)
+5. [Clone (copy locally) your Fork](#5---clone-your-fork)
+6. [Make your Edits](#6---make-your-changes)
+7. [Add (stage) the Changes](#7---add-the-changes-to-git)
+8. [Commit (save) the Changes](#8---commit-the-changes)
+9. [Push (upload) the Changes](#9---push-the-changes)
+10. [Open a pull request (request to merge)](#10---open-a-pull-request)
 
 ## 1 - Download Git and Create a GitHub Account
 
@@ -176,27 +191,27 @@ If you still have the command line open from earlier, you can use the 'cd' comma
 
 If you type `git status` you will see that there are "untracked changes" now.
 
-_7-git-add-status.png_
+![Screen of Windows CLI after git status command executed]({{site.baseurl}}/assets/images/pull-request-tutorial/7-git-add-status.png "A cropped screenshot of Windows Command Prompt after executing the git status command with 1 untracked change")
 
 Changes need to be 'staged' or 'added' before they can be saved or 'commit'ed. 
 
 You can add all the changes with `git add *`.
 
-_7-git-add-status-after-add.png_
+![Screen of Windows CLI after git add *]({{site.baseurl}}/assets/images/pull-request-tutorial/7-git-add-status-after-add.png "A cropped screenshot of Windows Command Prompt after executing the 'git add *' and 'git status' command with all changes tracked")
 
-Now your changes are staged.
+Now your changes are staged / tracked.
 
 ## 8 - Commit the changes 
 
-Committing takes a snapshot of where you are right now. It's basically a save.
+Committing takes a snapshot of the current state of the project. It's basically a save. 
 
 Every commit has to have a short message with it that describes what changes were made.
 
-Committing only "saves" the files that were already saved with `git add`.
+Committing only "saves" the files that were already staged/tracked with `git add`.
 
 To commit, type `git commit -m "My commit message"`.
 
-_8-git-commit-example.png_
+![Screen of Windows CLI after git commit]({{site.baseurl}}/assets/images/pull-request-tutorial/8-git-commit-example.png "A cropped screenshot of Windows Command Prompt after executing 'git commit -m `Added Starcraft idea`'")
 
 ## 9 - Push the Changes
 
@@ -204,13 +219,13 @@ Now it's time to send your commit back to the Github fork you created earlier.
 
 In the command line, type `git push origin`.
 
-_9-git-push-cli.png_
+![Screen of Windows CLI about to type git push origin]({{site.baseurl}}/assets/images/pull-request-tutorial/9-git-push-cli.png "A cropped screenshot of Windows Command Prompt with 'git push origin' as the command about to be executed")
 
 If it's your first time pushing to GitHub, a new window will pop up asking for your GitHub login. Login with this window. 
 
-_9-git-login-example.png_
+![Screen of Git GUI asking for GitHub login]({{site.baseurl}}/assets/images/pull-request-tutorial/9-git-login-example.png "A cropped screenshot of Git GUI asking for GitHub credentials")
 
-Now your changes will appear on your Fork on GitHub.
+Enter your GitHub credentials. Sometimes, you will be asked again in the command line. Once you enter your GitHub username and password, the commit you made will be "pushed" and will now appear on your Fork on GitHub.com.
 
 ## 10 - Open a Pull Request
 
@@ -218,7 +233,8 @@ Navigate to the original repository at [https://github.com/unhm-programming-team
 
 Click on the Pull Requests tab.
 
-_10-open-pull-request.png_
+![Screen of GitHub Pull Request Tab]({{site.baseurl}}/assets/images/pull-request-tutorial/10-open-pull-request.png "A cropped screenshot of GitHub.com Pull Request tab for unhm-programming-team/project-ideas repo")
+
 
 Click the big green button labeled "New Pull Request".
 
@@ -228,26 +244,27 @@ After clicking "compare across forks" you will be asked which repository is the 
 
 Set your fork to the head of the pull request by clicking the head repository and selecting your fork from the drop down options.
 
-_10-select-your-head.png_
+![Screen of GitHub Select Head Dropdown]({{site.baseurl}}/assets/images/pull-request-tutorial/10-select-your-head.png "A cropped screenshot of GitHub.com Create Pull Request asking for 'head' repository by presenting a drop down list of available repos ")
 
 A list of commits you made and the changes those commits caused will be shown. It will be indicated whether the branch can be automatically merged or not (pending approval of the original repository owner). 
 
 Click 'Create pull request'
 
-_10-create-pull-rq.png_
+![Screen of GitHub Create Pull Request]({{site.baseurl}}/assets/images/pull-request-tutorial/10-create-pull-rq.png "A cropped screenshot of GitHub.com ready to Create Pull Request after getting head and base repos ")
 
 The next page will ask you to enter a title and comments. You will at least need a title to submit the Pull Request.
 
-_10-create-pull-rq-comments.png_
+![Screen of GitHub Pull Request Title/Comments]({{site.baseurl}}/assets/images/pull-request-tutorial/10-create-pull-rq-comments.png "A cropped screenshot of GitHub.com asking for a title and comments on a new pull request ")
 
-
-
+Click Create pull request one last time.
 
 # Done!
 
-Congratulations. If you've made it this far, you've probably managed to make a pull request. Now all you have to do is wait for it to be reviewed and merged into the original repository. When that happens, you'll have the option to delete your branch.
+Congratulations. If you've made it this far, you've probably managed to make a pull request. Now all you have to do is wait for it to be reviewed and merged into the original repository.
 
 There's a lot more that can be done with Git, but hopefully this tutorial provides enough of the basics to help a new GitHub user make a pull request.
+
+Most IDEs, like VSCode and Pycharm, integrate Git into the user interface for convenience. There is also a Git GUI that can perform these operations. However, it's useful to know how to use Git from the command line because when one of those UIs fails or is taking to long to figure out, you will always be able to fall back on the command line.
 
 Please don't hesitate to contact myself or ask in the Discord help channel for more information. We can screen share and walk you through the process if you get stuck.
 
