@@ -5,6 +5,7 @@ date:   2021-03-27 16:25:30 -0400
 author: Karl Miller
 tags: meeting-results
 ---
+{% include programming_club_logo.html %}
 
 ### Attending
 
