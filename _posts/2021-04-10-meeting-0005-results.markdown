@@ -1,11 +1,17 @@
-### Meeting0005
-### 4/10/21
+---
+layout: post
+title:  "Meeting 0005 Results"
+date:   2021-04-10 17:00:00 -0400
+author: Kaitlin McManus and Karl Miller
+tags: meeting-results
+---
+{% include programming_club_logo.html %}
 
 ### Attending 
 - Karl Miller, President
 - Adam Morvant, Discord Administrator 
 - Bryan Robbins, Discord Administrator
-- Kaitlin McManus, Secratary 
+- Kaitlin McManus, Secretary 
 - Derek Satiago, Trustee
 - Anthony Clark, Trustee
 
@@ -51,18 +57,19 @@
 	- Physics Simulator
 	- Chkpi bash script for python linting
 
-After the meeting:
-	- Discussed how we might handle conduct issues that anticipate could arise
-	- Discussed possible events we could use funding for, like Pax-east
-	- Discussed that there is an API for canvas that could be interesting to explore
-	- Discussed fundraising options; ads on a popular web widget, computer cleaning service, donation fundraising
+### After the meeting:
 
+- Discussed how we might handle conduct issues that anticipate could arise
+- Discussed possible events we could use funding for, like Pax-east
+- Discussed that there is an API for canvas that could be interesting to explore
+- Discussed fundraising options; ads on a popular web widget, computer cleaning service, donation fundraising
 
-Next Meeting:
-	- Discuss options in constitution, hopefully vote on election procedures
-	- Discuss results of reaching out to faculty about budget, officialness
-	- Discuss ongoing and new projects
-	- Hopefully have a timeline for constitution completion and going official
+### Next Meeting:
+
+- Discuss options in constitution, hopefully vote on election procedures
+- Discuss results of reaching out to faculty about budget, officialness
+- Discuss ongoing and new projects
+- Hopefully have a timeline for constitution completion and going official
 
 
 
