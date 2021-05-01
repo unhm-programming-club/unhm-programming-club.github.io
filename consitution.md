@@ -271,7 +271,7 @@ The board of directors will vote once per year, after being elected to their pos
 
 # Section 3 : Parliamentary Procedure
 
-1. Meetings will be conducted informally, using the spirit of Robert's Rules of Order as described in the attached document, [`Roberts-Rules-of-Order.pdf`](../assets/misc/roberts-rules-of-order.pdf).
+1. Meetings will be conducted informally, using the spirit of Robert's Rules of Order as described in the attached document, [`Roberts-Rules-of-Order.pdf`](../assets/misc/Roberts-Rules-of-Order.pdf).
 1. Any attendee of a meeting may request that the meeting follow Robert's Rules of Order strictly, and the chair of the meeting will subsequently implement Robert's Rules.
 
 <p style="color:green;">(voted 4/24/2021, 6-0)</p>
