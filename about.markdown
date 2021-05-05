@@ -22,7 +22,7 @@ Even in contributing to group projects, there will be plenty of ways to help tha
 
 Members must join the GitHub team and create 1 pull request on Github per semester. It does not have to be code - contributing a single word of content is a valid contribution as well. The purpose of this requirement is to ensure everyone is _able_ to use Git; whether you want to contribute more is up to you.
 
-Pull requests are hard to figure out! Talk to us in the Discord so we can walk you through the process. A written guide with screenshots is also available [on this website](https://unhm-programming-club.github.io/2021/04/01/git-pull-request-guide.html)]. There are other guides online too!
+Pull requests are hard to figure out! Talk to us in the Discord so we can walk you through the process. A written guide with screenshots is also available [here](https://unhm-programming-club.github.io/2021/04/01/git-pull-request-guide.html). There are other guides online too!
 
 You must also be a student at UNH. Officers must attend UNH Manchester but membership is open to both campuses. Members can retain membership (but not officer roles) for up to 2 years after graduating or transferring. 
 

@@ -1,8 +1,8 @@
 - name: About
-  link: /about
+  link: /about/
   num: 1
 - name: Constitution
-  link: /constitution
+  link: /constitution/
   num: 2
 - name: Meetings
   link: /meeting-results.html

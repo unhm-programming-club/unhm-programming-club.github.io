@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: The University of New Hampshire Programming Club (Unofficial)
+title: The University of New Hampshire Programming Club (Official)
 email: klmiller1@wildcats.unh.edu
 description: Updates from the University of New Hampshire Programming Club
 baseurl: ""

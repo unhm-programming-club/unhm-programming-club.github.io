@@ -65,7 +65,7 @@ tags: meeting-results
 <br>
 <br>
 
-## Agenda Meeting 0008
+## Agenda Meeting 0009
 
 # Intros if new attendees
 
@@ -88,7 +88,13 @@ tags: meeting-results
  - Using old school equipment and some budget to get a server and some hosting, possibly locate it on campus
 
 # Discuss membership engagement
- - Get more individuals to do pull requests
+ - Getting more individuals to do pull requests
+
+# Discuss logo/branding
+ - Better logo than the computer screen?
+ - favicon for website & embed images?
+ - Wildcat with computer matrix style colors?
+ - Something else?
 
 # Meet with Prof. Shallow about web project
  - (Pending confirmation from professor)
