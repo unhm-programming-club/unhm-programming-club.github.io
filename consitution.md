@@ -4,8 +4,6 @@ title: Constitution
 permalink: /constitution/
 ---
 
-_This is the final draft of the Constitution. The records of when we voted on each clause are included. This draft is currently up for ratification. Members may vote in the Discord. Members who have not completed all membership requirements (namely, a pull request) may still vote and are free to voice their opinions, but only the votes of members who have completed all requirements will be tallied at the end._
-
 ### Table of Contents 
 
 - [Article I - Name](#article-i---name)
