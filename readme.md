@@ -56,3 +56,21 @@ This is internally for Jekyll. Nothing needs to be modified in here, and will be
 ### assets
 
 Contains css, images, and javascript assets used on site pages.
+
+To include javascript in a page, put the script under assets/js. Then, in the YAML front-matter, include it under the attribute `local-js-dependencies`.
+
+e.g:
+
+```
+---
+layout: page
+title: Constitution
+permalink: /constitution/
+local-js-dependencies: 
+    - "/constitution-vote-toggle.js"
+
+---
+
+# content ...
+
+```
