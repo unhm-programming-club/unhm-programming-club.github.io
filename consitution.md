@@ -223,6 +223,10 @@ The club will maintain a slate of at least 5 officers. If roles are not filled, 
 
 <p style="color:green;" class="vote-record">(voted 4/17/2021, 6-1)</p>
 
+4. Meeting attendees may elect to put an important matter to an asynchronous vote of the club or board on the Discord, if quorum cannot be met or if it is felt that said matter should be put to asynchronous vote. Before the next scheduled meeting, members may vote, and if the total number of members exceed quorum and the measure passes, it will be considered passed as though those members attended the meeting.
+
+<p style="color:green;" class="vote-record">(Amendment, voted 5/29/2021, 7-0)</p>
+
 # Section 2 - Officer Elections
 
 1. The club will hold elections for officers in the first week of March of the Spring semester.
