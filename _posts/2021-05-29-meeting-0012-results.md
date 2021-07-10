@@ -36,7 +36,7 @@ tags: meeting-results
 
 - Discussed Meet and Greet for July/August. Some members may be a little further away but would likely be willing to travel for it. Discussed whether the club should involve itself in asking about people's vaccine status before voting that it should not.
 
-- Discussed oingoing projects and life stuff
+- Discussed ongoing projects and life stuff
  - Derek has been using Kubernetes
  - Bryan has been setting up some laptops for a school task
  - Kaitlin has been focused on her work
