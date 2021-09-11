@@ -1,6 +1,8 @@
 
 
 const ConwaysCanvas = document.getElementById("conways-background");
+ConwaysCanvas.style.zIndex = -1;
+ConwaysCanvas.style.position = 'fixed';
 
 
 let bb = document.body.getBoundingClientRect();
@@ -8,10 +10,10 @@ let bb = document.body.getBoundingClientRect();
 class ConwaysBackground {
 
     constructor(squareSize=20, 
-                backgroundColor="pink", 
-                squareColor="indigo", 
-                canvasWidth=500, 
-                canvasHeight=500, 
+                backgroundColor="rgb(253, 253, 253)", 
+                squareColor="#D9D9D9", 
+                canvasWidth=bb.width, 
+                canvasHeight=bb.height, 
                 timeInterval = 500,
                 survivesLower = 2,
                 survivesHigher = 3,
@@ -26,6 +28,10 @@ class ConwaysBackground {
         this.survivesLower = survivesLower;
         this.survivesHigher = survivesHigher;
         this.becomesAlive = becomesAlive;
+        this.ctx = ConwaysCanvas.getContext('2d');
+
+        ConwaysCanvas.width = this.canvasWidth;
+        ConwaysCanvas.height = this.canvasHeight;
 
         let bb = document.body.getBoundingClientRect();
 
@@ -60,11 +66,77 @@ class ConwaysBackground {
         }
     }
     renderBoard() {
-        for(let x = 0; x < gameBoard.length; x++) {
-            let column = gameBoard[x];
+        for(let x = 0; x < this.gameBoard.length; x++) {
+            let column = this.gameBoard[x];
             for(let y = 0; y < column.length; y++) {
-                drawSquare(x,y);
+                this.drawSquare(x,y);
             }
         }
     }
+    drawSquare(x,y) {
+        let val = this.gameBoard[x][y];
+        let start_x = x * this.squareSize;
+        let start_y = y * this.squareSize;
+        if(val == 0) {
+            this.ctx.fillStyle = this.backgroundColor;
+        }
+        else {
+            this.ctx.fillStyle = this.squareColor;
+        }
+        this.ctx.fillRect(start_x, start_y, this.squareSize, this.squareSize);
+
+    }
+    countNeighbors(x,y) {
+        var counter = 0;
+           
+        for(let row=-1;row <= 1;row++){
+            for(let col = -1;col <= 1;col++){
+                if(!(row==0&&col==0)){              
+                  if (x+row>=0  && y + col>=0 && x+row < this.boardWidth && y + col < this.boardHeight ){
+                     counter += this.gameBoard[x+row][y+col];
+                    }  
+                }                           
+            }
+        }        
+        return counter;
+    }
+    sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    stepBoard() {
+        let new_board = this.getNewEmptyBoard();
+        for(let x = 0; x < this.boardWidth; x++) {
+            for(let y = 0; y < this.boardHeight; y++) {
+                let square_was_alive = (this.gameBoard[x][y] == 1);
+                let neighbors = this.countNeighbors(x,y);
+                if(square_was_alive) {
+                    if(neighbors >= this.survivesLower && neighbors <= this.survivesHigher) {
+                        new_board[x][y] = 1;
+                    }
+                    else {
+                        new_board[x][y] = 0;
+                    }
+                }
+                else {
+                    if(neighbors == this.becomesAlive) {
+                        new_board[x][y] = 1;
+                    }
+                }
+            }
+        }
+        this.gameBoard = new_board;
+    }
+    async run() {
+        while(this.running) {
+            this.stepBoard();
+            this.renderBoard();
+            await this.sleep(this.timeInterval);
+        }
+    }
 }
+
+
+let cb = new ConwaysBackground();
+cb.randomizeBoard();
+cb.running = true;
+cb.run();
