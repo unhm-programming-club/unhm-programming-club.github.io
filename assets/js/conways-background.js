@@ -1,4 +1,5 @@
-
+console.log('Conways Game of Life Background');
+console.log('Coded by Karl Miller and Davis Moore');
 
 const ConwaysCanvas = document.getElementById("conways-background");
 ConwaysCanvas.style.zIndex = -1;
@@ -14,7 +15,7 @@ class ConwaysBackground {
                 squareColor="#D9D9D9", 
                 canvasWidth=bb.width, 
                 canvasHeight=bb.height, 
-                timeInterval = 500,
+                timeInterval = 300,
                 survivesLower = 2,
                 survivesHigher = 3,
                 becomesAlive = 3,
@@ -45,6 +46,7 @@ class ConwaysBackground {
             this.boardHeight = Math.floor(this.canvasHeight / this.squareSize);
             this.gameBoard = this.getNewEmptyBoard();
         }
+        this.addDocumentListeners();
     }
     getNewEmptyBoard() {
         let new_board = []
@@ -64,6 +66,13 @@ class ConwaysBackground {
                 column[y] = Math.round(Math.random())
             }
         }
+    }
+    resizeBoard() {
+        let bb = document.body.getBoundingClientRect();
+        this.canvasWidth=bb.width;
+        this.canvasHeight=bb.height; 
+        ConwaysCanvas.width = this.canvasWidth;
+        ConwaysCanvas.height = this.canvasHeight;
     }
     renderBoard() {
         for(let x = 0; x < this.gameBoard.length; x++) {
@@ -126,6 +135,37 @@ class ConwaysBackground {
         }
         this.gameBoard = new_board;
     }
+    clickBoard(ev) {
+        if(ev.buttons == 1 || ev.type == "mousedown") {
+            let canvas_bounds = ConwaysCanvas.getBoundingClientRect();
+            let canvas_x = ev.clientX - canvas_bounds.x;
+            let canvas_y = ev.clientY - canvas_bounds.y;
+            let square_x = Math.floor(canvas_x / cb.squareSize);
+            let square_y = Math.floor(canvas_y / cb.squareSize);
+            if(square_x < cb.boardWidth) { 
+                let column = cb.gameBoard[square_x];
+                if(square_y < cb.boardHeight) {
+                    let cell = column[square_y];
+                    // newvalue = (cell == 1) ? 0 : 1;
+                    column[square_y] = 1;
+                    cb.drawSquare(square_x, square_y);
+                }
+            }
+        }
+
+    }
+    toggle() {
+        if(!cb.running) {
+            cb.running = true;
+            sessionStorage.setItem('conways-bg', 'true');
+            cb.run();
+        } else {
+            cb.running = false;
+            sessionStorage.setItem('conways-bg', 'false')
+            cb.board = cb.getNewEmptyBoard();
+            cb.renderBoard();
+        }
+    }
     async run() {
         while(this.running) {
             this.stepBoard();
@@ -133,10 +173,22 @@ class ConwaysBackground {
             await this.sleep(this.timeInterval);
         }
     }
+    addDocumentListeners() {
+        window.addEventListener('resize', this.resizeBoard);
+        document.addEventListener('mousedown', this.clickBoard);
+        document.addEventListener('mousemove', this.clickBoard);
+        let imageElements = document.getElementsByTagName('img');
+        for(let i = 0; i < imageElements.length; i++) {
+            let img = imageElements[i];
+            img.addEventListener('click', this.toggle);
+        }
+    }
 }
 
 
 let cb = new ConwaysBackground();
 cb.randomizeBoard();
-cb.running = true;
-cb.run();
+if(sessionStorage.getItem('conways-bg') == "true") {
+    cb.running = true;
+    cb.run();
+}
