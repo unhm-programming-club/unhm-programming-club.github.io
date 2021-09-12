@@ -157,6 +157,7 @@ class ConwaysBackground {
     toggle() {
         if(!cb.running) {
             cb.running = true;
+            cb.resizeBoard();
             sessionStorage.setItem('conways-bg', 'true');
             cb.run();
         } else {
@@ -188,7 +189,7 @@ class ConwaysBackground {
 
 let cb = new ConwaysBackground();
 cb.randomizeBoard();
-if(sessionStorage.getItem('conways-bg') == "true") {
+if(sessionStorage.getItem('conways-bg') != "false") {
     cb.running = true;
     cb.run();
 }
