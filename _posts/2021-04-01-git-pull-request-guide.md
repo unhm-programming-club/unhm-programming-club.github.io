@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to Git Pull"
+title:  "How to make a Git Pull Request"
 date:   2021-04-01 08:25:30 -0400
 author: Karl Miller
 tags: tutorials
