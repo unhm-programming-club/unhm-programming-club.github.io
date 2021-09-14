@@ -12,7 +12,7 @@ class ConwaysBackground {
 
     constructor(squareSize=20, 
                 backgroundColor="rgb(253, 253, 253)", 
-                squareColor="#D9D9D9", 
+                squareColor="#DDDDDD", 
                 canvasWidth=bb.width, 
                 canvasHeight=bb.height, 
                 timeInterval = 300,

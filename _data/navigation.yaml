@@ -7,6 +7,9 @@
 - name: Meetings
   link: /meeting-results.html
   num: 3
+- name: Tutorials
+  link: /tag-page.html?tag=tutorials
+  num: 4
 - name: Home
   link: /
-  num: 4
+  num: 5
