@@ -1,40 +1,38 @@
-console.log('Conways Game of Life Background');
-console.log('Coded by Karl Miller and Davis Moore');
-
-const ConwaysCanvas = document.getElementById("conways-background");
-ConwaysCanvas.style.zIndex = -1;
-ConwaysCanvas.style.position = 'fixed';
-
-
-let bb = document.body.getBoundingClientRect();
-
 class ConwaysBackground {
 
-    constructor(squareSize=20, 
+    constructor(canvas, squareSize=20, 
                 backgroundColor="rgb(253, 253, 253)", 
                 squareColor="#DDDDDD", 
-                canvasWidth=bb.width, 
-                canvasHeight=bb.height, 
+                canvasWidth=500, 
+                canvasHeight=500, 
                 timeInterval = 300,
                 survivesLower = 2,
                 survivesHigher = 3,
                 becomesAlive = 3,
                 gameBoard = undefined) {
+        console.log('Conways Game of Life Background');
+        console.log('Coded by Karl Miller and Davis Moore');
+
+        this.canvas = canvas;
+
+        let bb = document.body.getBoundingClientRect();
+
+        canvas.width = bb.width;
+        canvas.height = bb.height;
+        canvas.style.zIndex = -1; 
+        canvas.style.position = 'fixed';
+
         this.squareSize = squareSize;
         this.backgroundColor = backgroundColor;
         this.squareColor = squareColor;
-        this.canvasWidth = canvasWidth;
-        this.canvasHeight = canvasHeight;
+        this.canvasWidth = canvas.width;
+        this.canvasHeight = canvas.height;
         this.timeInterval = timeInterval;
         this.survivesLower = survivesLower;
         this.survivesHigher = survivesHigher;
         this.becomesAlive = becomesAlive;
-        this.ctx = ConwaysCanvas.getContext('2d');
+        this.ctx = canvas.getContext('2d');
 
-        ConwaysCanvas.width = this.canvasWidth;
-        ConwaysCanvas.height = this.canvasHeight;
-
-        let bb = document.body.getBoundingClientRect();
 
         // not yet implemented - if board state is somehow saved between pages, this will allow keeping old board state 
         if(Array.isArray(gameBoard) && Array.isArray(gameBoard[0])) {
@@ -135,38 +133,41 @@ class ConwaysBackground {
         }
         this.gameBoard = new_board;
     }
-    clickBoard(ev) {
-        if(ev.buttons == 1 || ev.type == "mousedown") {
-            let canvas_bounds = ConwaysCanvas.getBoundingClientRect();
-            let canvas_x = ev.clientX - canvas_bounds.x;
-            let canvas_y = ev.clientY - canvas_bounds.y;
-            let square_x = Math.floor(canvas_x / cb.squareSize);
-            let square_y = Math.floor(canvas_y / cb.squareSize);
-            if(square_x < cb.boardWidth) { 
-                let column = cb.gameBoard[square_x];
-                if(square_y < cb.boardHeight) {
-                    let cell = column[square_y];
-                    // newvalue = (cell == 1) ? 0 : 1;
-                    column[square_y] = 1;
-                    cb.drawSquare(square_x, square_y);
+    clickBoard() {
+        let that = this;
+        return function(ev) {
+            if(ev.buttons == 1 || ev.type == "mousedown") {
+                let canvas_bounds = that.canvas.getBoundingClientRect();
+                let canvas_x = ev.clientX - canvas_bounds.x;
+                let canvas_y = ev.clientY - canvas_bounds.y;
+                let square_x = Math.floor(canvas_x / that.squareSize);
+                let square_y = Math.floor(canvas_y / that.squareSize);
+                if(square_x < that.boardWidth) { 
+                    let column = that.gameBoard[square_x];
+                    if(square_y < that.boardHeight) {
+                        let cell = column[square_y];
+                        // newvalue = (cell == 1) ? 0 : 1;
+                        column[square_y] = 1;
+                        that.drawSquare(square_x, square_y);
+                    }
                 }
             }
         }
 
     }
-    toggle() {
-        if(!cb.running) {
-            cb.running = true;
-            cb.resizeBoard();
-            sessionStorage.setItem('conways-bg', 'true');
-            cb.run();
-        } else {
-            cb.running = false;
-            sessionStorage.setItem('conways-bg', 'false')
-            cb.board = cb.getNewEmptyBoard();
-            cb.renderBoard();
-        }
-    }
+    // toggle() {
+    //     if(!cb.running) {
+    //         cb.running = true;
+    //         cb.resizeBoard();
+    //         sessionStorage.setItem('conways-bg', 'true');
+    //         cb.run();
+    //     } else {
+    //         cb.running = false;
+    //         sessionStorage.setItem('conways-bg', 'false')
+    //         cb.board = cb.getNewEmptyBoard();
+    //         cb.renderBoard();
+    //     }
+    // }
     async run() {
         while(this.running) {
             this.stepBoard();
@@ -176,8 +177,8 @@ class ConwaysBackground {
     }
     addDocumentListeners() {
         window.addEventListener('resize', this.resizeBoard);
-        document.addEventListener('mousedown', this.clickBoard);
-        document.addEventListener('mousemove', this.clickBoard);
+        document.addEventListener('mousedown', this.clickBoard());
+        document.addEventListener('mousemove', this.clickBoard());
         let imageElements = document.getElementsByTagName('img');
         for(let i = 0; i < imageElements.length; i++) {
             let img = imageElements[i];
@@ -187,9 +188,33 @@ class ConwaysBackground {
 }
 
 
-let cb = new ConwaysBackground();
-cb.randomizeBoard();
-if(sessionStorage.getItem('conways-bg') != "false") {
-    cb.running = true;
-    cb.run();
+/**
+ * The following ties Conways to the PopoutMenu (in settings-menu.js)
+ */
+
+var conwaysCanvas = null; 
+var conwaysProgram = null;
+
+function createConwaysBg() {
+    if(conwaysCanvas || conwaysProgram) destroyConwaysBg();
+    conwaysCanvas = document.createElement('canvas');
+    document.body.appendChild(conwaysCanvas)
+    conwaysProgram = new ConwaysBackground(conwaysCanvas);
+    conwaysProgram.randomizeBoard();
+    conwaysProgram.running = true;
+    conwaysProgram.run();
 }
+function destroyConwaysBg() {
+    if(conwaysProgram) conwaysProgram.running = false;
+    if(conwaysCanvas) conwaysCanvas.remove();    
+}
+
+function toggleConwaysBackground(trueFalse) {
+    if(trueFalse == "true") {
+        createConwaysBg();
+    } else {
+        destroyConwaysBg();
+    }
+}
+
+popoutMenu.createMenuTopicSection('conways-bg', 'radio', ['true','false'], toggleConwaysBackground);

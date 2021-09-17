@@ -35,6 +35,9 @@ plugins:
 collections:
   - authors
 
+# footer scripts - added after <footer> in footer.html in this order:
+
+settings_button: true 
 conways: true
 
 # Exclude from processing.

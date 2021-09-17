@@ -34,6 +34,13 @@
 
 </footer>
 
+{%- if site.settings_button -%}
+<img src = "{{site.baseurl}}/assets/images/settingsIcon.png" id="pm-settings-button">
+<script src="{{site.baseurl}}/assets/js/settings-menu.js"></script>
+{%- endif -%}
+
 {% if site.conways %}
-{%- include conways.html -%}
+<!-- <canvas id="conways-background" style= "position:absolute; left:0; right:0">
+</canvas> -->
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/conways-background.js"></script>
 {% endif %}

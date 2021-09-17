@@ -1,3 +1,15 @@
-.footer-heading {
-    color: darkslategray;
+#pm-settings-button {
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    filter:opacity(50%);
+}
+#pm-settings-button:hover {
+    filter:opacity(100%);
+}
+#pm-settings-button:active {
+    width: 24px;
+    height: 24px;
 }

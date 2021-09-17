@@ -1,8 +1,42 @@
-#test {
-    background-color: black;
-    position: fixed;
-    left: 10px;
-    right: 10px;
-    width: 100px;
-    height: 100px;
+.pm-menu {
+    border: 0.6mm solid darkslategray;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    filter: drop-shadow(2px 2px 2px gray);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.pm-menuheader {
+    font-size: 22px;
+    letter-spacing: 3px;
+    border-bottom: 2px solid darkslategray;
+    margin-bottom: 5px;
+
+}
+
+.pm-topicheader {
+    border-bottom: 2px solid lightgray;
+    ;
+    letter-spacing: 0.2mm;
+    font-size: 18px;
+    width: 85%;
+    border-top: 1px solid rgb(120, 167, 167);
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.pm-topic {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.pm-x {
+    background-color: blue;
 }
