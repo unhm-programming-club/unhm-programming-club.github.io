@@ -145,18 +145,17 @@ class MenuTopicSection {
             topic.selections[topic.names[i]] = option;
             select.appendChild(option);
         }
+        select.addEventListener('change', (changeEvent)=> {
 
-        let onChangeFunction = (changeEvent)=> {
-
+            console.log('change event')
             let selectedOption = select.options[select.selectedIndex].innerHTML;
+            localStorage.setItem(topic.storageKey, selectedOption);
             topic.selectionFunction(selectedOption);
-            localStorage.setItem(topic.storageKey, topic.names[i]);
-        }
-        select.addEventListener('change', onChangeFunction);
+        });
 
         topic.topicDiv.appendChild(select);
 
-        console.log(topic.storageKey);
+        //console.log(topic.storageKey);
         let val = localStorage.getItem(topic.storageKey);
         if(val != null) {
             for(let i = 0; i < select.options.length; i++) {
