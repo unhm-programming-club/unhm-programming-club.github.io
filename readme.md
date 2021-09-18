@@ -90,7 +90,7 @@ tags: meeting-results
 
 ## Custom javascript
 
-### Generally
+### Global Scripts
 
 `<script>` elements are added by Jekyll to each page after the footer in `_includes/footer.html`
 Each custom script is activated or deactivated in a build based on the boolean values in `_config.yml`. The values in the configuration file are listed in the order the scripts are added.
@@ -105,3 +105,51 @@ For example: `popoutMenu.createMenuTopicSection('conways-bg', 'radio', ['true','
 - Where `'radio'` is the type of button to create for each item, currently either 'select' or 'radio'.
 - Where `['true','false']` are labels for each option as well as the possible values for the key in `LocalStorage`
 - Where `toggleConwaysBackground` is a function that will be called when a new option is selected, and passed the corresponding selected value, in this case 'true' or 'false'. 
+
+### Custom Javascript for only one page on the site
+
+YAML front matter on any page (such as a post) may contain the jekyll variable `local-js-dependencies` and list paths (from assets/js) to scripts, which will be loaded *after* the `<head>` element of a page, but before the body. It's created in `_layouts/default.html`. Example YAML front matter:
+
+```
+---
+layout: page
+title: Constitution
+permalink: /constitution/
+local-js-dependencies: 
+    - "/constitution-vote-toggle.js"
+
+---
+```
+
+Because these scripts are loaded before the `body` element, script logic will likely have to be contained within a listener for the [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event) event
+
+### External javascript for a page
+
+Not currently used, but useful if you want to, say, put React in one of your posts. Add as YAML front matter for the list `external-js-dependencies`, with values corresponding to URLS. For example:
+
+```
+---
+layout: post
+title: My Cool React Apps
+permalink: /my-cool-react-apps/
+local-js-dependencies:
+    - "/reactapps/myapp.js"
+external-js-dependencies:
+    - "https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+---
+```
+
+### A snippet of javascript in-line for a page
+
+When writing a markdown page that will be processed by Jekyll, you can use [includes](https://jekyllrb.com/docs/includes/) at any time. 
+
+You can add a custom 'snippet' into your page with the following command:
+
+`{% include snippet-in-page.html content="delete-posts-not-in-query-string.js" %}`
+
+The script will look to `{{base.url}}/assets/js/snippets/` for the snippet you wish to include.
+
+
+
+
+
