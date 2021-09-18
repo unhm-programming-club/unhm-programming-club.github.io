@@ -5,6 +5,8 @@
     top: 10px;
     left: 10px;
     filter:opacity(50%);
+    z-index: 100;
+    box-shadow: 2px 2px gray;
 }
 #pm-settings-button:hover {
     filter:opacity(100%);

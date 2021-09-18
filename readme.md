@@ -143,11 +143,11 @@ external-js-dependencies:
 
 When writing a markdown page that will be processed by Jekyll, you can use [includes](https://jekyllrb.com/docs/includes/) at any time. 
 
-You can add a custom 'snippet' into your page with the following command:
+You can add a custom 'snippet' into your page with a command similar to this:
 
 `{% include snippet-in-page.html content="delete-posts-not-in-query-string.js" %}`
 
-The script will look to `{{base.url}}/assets/js/snippets/` for the snippet you wish to include.
+The include will look to `{{base.url}}/assets/js/snippets/` for the snippet you wish to include, which is passed as the `content` parameter of the include.
 
 
 
