@@ -5,11 +5,14 @@
   {%- seo -%}
   <!-- <link rel="icon" type="image/png" href ="{{site.baseurl}}/assets/icons/{{site.favicon}}"> Add this when we have a favicon-->
   <link rel="canonical" href="{{ site.url }}{{site.baseurl}}{{ page.url }}" />
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
-  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" id="styleLink">
+  {% for style in site.component_styles %}
+  <link rel="stylesheet" href="{{ site.baseurl}}/assets/css/components/{{style}}.css">
+  {% endfor %}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="{{site.baseurl}}/assets/favicons/site.webmanifest">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' -%}
     {%- include google-analytics.html -%}

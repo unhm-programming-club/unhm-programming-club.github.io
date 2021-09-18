@@ -29,16 +29,24 @@ google_analytics: true
 
 # Build settings
 theme: minima
+alternate_themes: 
+  - merlot
 plugins:
   - jekyll-feed
 
 collections:
   - authors
 
+# added as <links> in the top after the regular stylesheet in head include
+component_styles:
+  - menuButton
+  - popoutMenu
+
 # footer scripts - added after <footer> in footer.html in this order:
 
 settings_button: true 
 conways: true
+theme_selector: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
