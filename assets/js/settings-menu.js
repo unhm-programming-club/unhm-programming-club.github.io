@@ -143,12 +143,17 @@ class MenuTopicSection {
             option.className = topic.classPrefix + 'option';
             option.innerHTML = topic.names[i];
             topic.selections[topic.names[i]] = option;
-            option.addEventListener('mousedown', (e)=> {
-                topic.selectionFunction(topic.names[i]);
-                localStorage.setItem(topic.storageKey, topic.names[i]);
-            })
             select.appendChild(option);
         }
+
+        let onChangeFunction = (changeEvent)=> {
+
+            let selectedOption = select.options[select.selectedIndex].innerHTML;
+            topic.selectionFunction(selectedOption);
+            localStorage.setItem(topic.storageKey, topic.names[i]);
+        }
+        select.addEventListener('change', onChangeFunction);
+
         topic.topicDiv.appendChild(select);
 
         console.log(topic.storageKey);
