@@ -27,9 +27,15 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  unhm-programming-club
 google_analytics: true
 
+# test for themes if desired by uncommenting this
+# show_downloads: true
+
 # Build settings
 theme: minima
-alternate_themes: 
+alternate_themes:
+  - minima-solarized
+  - minima-dark
+  - minima-solarized-dark
   - architect
   - cayman
   - dinky
@@ -40,6 +46,7 @@ alternate_themes:
   - minimal
   - modernist
   - tactile
+  - time-machine
 plugins:
   - jekyll-feed
 

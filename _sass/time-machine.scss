@@ -1,0 +1,11 @@
+
+
+// import minima first, for layout - will be overwritten from that base
+@import "minima/skins/classic";
+@import "minima/initialize";
+
+@import "time-machine/time-machine";
+
+.download-bar {
+    margin: auto;
+}

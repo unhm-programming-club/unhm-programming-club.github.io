@@ -6,17 +6,44 @@
   <script src = "{{site.baseurl}}/assets/js/{{ js }}"></script>
   {% endfor %}
 
+  
+
+
   <body>
+    <div class="body-wrapper">
 
     {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
+    
+    {% if site.show_downloads %}
+    <section id="downloads" class="download-bar">
+      <span class="inner">
+        <a id="download-zip" href="{{ site.github.zip_url }}" class="zip button">
+          <span><em>download</em> .ZIP</span>
+        </a>
+        
+        <a id="download-tar-gz" href="{{ site.github.tar_url }}" class="tgz button">
+          <span><em>download</em> .TGZ</span>
+        </a>
+      </span>
+    </section>
+    {% else %}
+    <div id="no-downloads">
+      <span class="inner">
+      </span>
+    </div>
+    {% endif %}
+    <div id="main-container">
+    <main class="page-content main-content" id="main-content" aria-label="Content">
       <div class="wrapper">
         {{ content }}
       </div>
     </main>
+    </div>
 
     {%- include footer.html -%}
+
+    </div>
 
   </body>
 

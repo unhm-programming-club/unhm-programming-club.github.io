@@ -1,2 +1,9 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+.footer-wrapper {
+    max-width: calc(800px - (30px * 2));
+    padding-right: 30px;
+    padding-left: 30px
+
+}

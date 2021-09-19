@@ -2,3 +2,34 @@
 //     @import "{{ site.theme }}";
 // Then using this theme with jekyll-remote-theme will work fine.
 @import "jekyll-theme-leap-day";
+
+.site-header {
+    position:absolute;
+}
+
+nav {
+    display: block;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.site-title h1 {
+    white-space: normal;
+}
+
+@media print, screen and (max-height: 480px) {
+    nav {
+      display: block;
+      float: left;
+      width: 30%;
+    }
+  
+    footer {
+      text-align: center;
+      margin: 20px auto;
+      position: relative;
+      left:auto;
+      bottom:auto;
+      width:auto;
+    }
+  }

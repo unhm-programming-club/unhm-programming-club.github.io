@@ -1,9 +1,10 @@
-<header class="site-header" role="banner">
-
-  <div class="wrapper">
+<header class="site-header page-header" role="banner">
+ <span class="ribbon-outer">
+   <span class="ribbon-inner">
+  <div class="wrapper head-wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}"><h1 class="title">{{ site.title | escape }}</h1></a>
 
     {%- if page_paths -%}
       <nav class="site-nav">
@@ -23,4 +24,8 @@
       </nav>
     {%- endif -%}
   </div>
+  <span class="left-tail"></span>
+  <span class="right-tail"></span>
+</span>
+</span>
 </header>
