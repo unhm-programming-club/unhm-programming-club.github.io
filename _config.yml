@@ -30,9 +30,16 @@ google_analytics: true
 # Build settings
 theme: minima
 alternate_themes: 
+  - architect
+  - cayman
+  - dinky
   - hacker
+  - leap-day
   - merlot
   - midnight
+  - minimal
+  - modernist
+  - tactile
 plugins:
   - jekyll-feed
 
