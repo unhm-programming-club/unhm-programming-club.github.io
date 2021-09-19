@@ -157,7 +157,7 @@ class MenuTopicSection {
 
         //console.log(topic.storageKey);
         let val = localStorage.getItem(topic.storageKey);
-        if(val != null) {
+        if(val) {
             for(let i = 0; i < select.options.length; i++) {
                 if(select.options[i].innerHTML == val) {
                     select.selectedIndex = i;

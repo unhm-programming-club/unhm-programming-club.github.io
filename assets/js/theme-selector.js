@@ -13,9 +13,11 @@ function changeTheme(selectedTheme) {
     let linkElement = document.getElementById("styleLink");
     if(selectedTheme == default_theme) {
         linkElement.href = "{{site.baseurl}}/assets/css/main.css";
+        return;
     }
     else {
         linkElement.href = "{{site.baseurl}}/assets/css/" + selectedTheme + ".css";
+        return
     }
 }
 

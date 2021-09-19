@@ -30,9 +30,6 @@ google_analytics: true
 # Build settings
 theme: minima
 alternate_themes: 
-  - slate
-  - minimal
-  - leapday
   - hacker
   - merlot
   - midnight
