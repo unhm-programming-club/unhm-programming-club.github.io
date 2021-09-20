@@ -1,8 +1,10 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
 
-$title-shadow: green;
-$title-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+$title-shadow: #599A3A;
+$title-color: #1E161B;
 $title-background: gray;
 $title-outline: darkslategray;
 $link-button-background: lightgray;
@@ -23,16 +25,34 @@ $image-url: "../images/styles/karl-custom-1/";
 
 .site-title .title {
     color:$title-color;
-    font-size: 120%;
+    font-size: 36px;
     text-align: center;
     text-shadow: 2px 2px 2px $title-shadow;
-    font-family: 'Consolas', Helvetica, Arial, serif;
-
+    font-family: 'Raleway', sans-serif;
+}
+.site-title .title:hover {
+    animation: titleHover;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+    animation-fill-mode:forwards;
+}
+@keyframes titleHover {
+    100% {
+        padding-left: 30px;
+    }
+}
+@keyframes stretchSpacing {
+    100% {
+        letter-spacing: 0.7mm;
+        font-size: 110%;
+    }
 }
 
 .site-header {
     // background-color: $title-outline;
-    background-image: url($image-url + "steel.bmp")
+    background-image: url($image-url + "steel.bmp");
+    background-size: 30%;
 }
 
 .head-wrapper {
@@ -109,7 +129,18 @@ $image-url: "../images/styles/karl-custom-1/";
     background-color: $page-link-background-color;
     text-shadow: 1px 1px 3px $page-link-text-shadow;
 }
+.site-nav .page-link:hover {
+    animation: stretchSpacing;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+    animation-fill-mode:forwards;
+}
 .trigger {
     padding: 5px;
     margin: auto;
+}
+
+#main-container {
+    background:linear-gradient(to bottom, #0F0F0F 0%, #C7C7C7 1%, #F0F0F0 10%);
 }
