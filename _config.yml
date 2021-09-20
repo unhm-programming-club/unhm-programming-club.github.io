@@ -33,6 +33,7 @@ google_analytics: true
 # Build settings
 theme: minima
 alternate_themes:
+  - karl-custom-1
   - minima-solarized
   - minima-dark
   - minima-solarized-dark

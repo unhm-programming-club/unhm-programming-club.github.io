@@ -1,0 +1,115 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+$title-shadow: green;
+$title-color: black;
+$title-background: gray;
+$title-outline: darkslategray;
+$link-button-background: lightgray;
+$link-button-left-border: gray;
+$link-button-bottom-border: black;
+$page-link-text-color: #1E1E1E;
+$page-link-box-shadow: #212625;
+$page-link-background-color: #D3F4EE;
+$page-link-text-shadow: #90A7A3;
+$image-url: "../images/styles/karl-custom-1/";
+
+.footer-wrapper {
+    max-width: calc(800px - (30px * 2));
+    padding-right: 30px;
+    padding-left: 30px
+
+}
+
+.site-title .title {
+    color:$title-color;
+    font-size: 120%;
+    text-align: center;
+    text-shadow: 2px 2px 2px $title-shadow;
+    font-family: 'Consolas', Helvetica, Arial, serif;
+
+}
+
+.site-header {
+    // background-color: $title-outline;
+    background-image: url($image-url + "steel.bmp")
+}
+
+.head-wrapper {
+    //background-color: $title-background;
+    background: linear-gradient(to bottom, #d8e0de 0%,#aebfbc 22%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%);
+    border-width: 0 10px;
+    border-image: url($image-url + "left-right-steel-border.png") 0% 50% repeat;
+    border-style: solid;
+
+}
+.left-tail {
+    width: 100%;
+    display: block;
+    float:left;
+    height: 10px;
+    background-color: black;
+    background-image: url($image-url + 'ball.png');
+    animation-name: electric;
+    animation-duration: 300ms;
+    animation-iteration-count: infinite;
+}
+@keyframes electric {
+    0% {
+        background-image: url($image-url + 'ball.png');
+    }
+    11% {
+        background-image: url($image-url + 'ball2.png');
+    }
+    22% {
+        background-image: url($image-url + 'ball3.png');
+    }
+    33% {
+        background-image: url($image-url + 'ball4.png');
+    }
+    44% {
+        background-image: url($image-url + 'ball5.png');
+    }
+    56% {
+        background-image: url($image-url + 'ball6.png');
+    }
+    67% {
+        background-image: url($image-url + 'ball7.png');
+    }
+    78% {
+        background-image: url($image-url + 'ball8.png');
+    }
+    100% {
+        background-image: url($image-url + 'ball.png');
+    }
+    
+}
+
+.site-nav {
+    padding-left: 2px;
+    padding-right: 2px;
+    background: white;
+    text-align: left;
+    background-color: rgba(1,1,1,0);
+    border-width: 0px;
+}
+.page-link {
+    border-bottom: 2px solid $link-button-bottom-border;
+    border-left: 2px solid $link-button-left-border;
+    letter-spacing: 0.5mm;
+    margin: 3px;
+    padding: 3px;
+    border-radius: 10px;
+}
+.site-nav .page-link {
+    padding: 5px;
+    padding-left: 7px;
+    box-shadow: 5px 10px $page-link-box-shadow;
+    color: $page-link-text-color;
+    background-color: $page-link-background-color;
+    text-shadow: 1px 1px 3px $page-link-text-shadow;
+}
+.trigger {
+    padding: 5px;
+    margin: auto;
+}
