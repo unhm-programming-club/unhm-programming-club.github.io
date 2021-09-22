@@ -34,7 +34,7 @@ google_analytics: true
 theme: minima
 alternate_themes:
   - chipset
-  - karl-custom-1
+  - electric-green
   - minima-solarized
   - minima-dark
   - minima-solarized-dark
