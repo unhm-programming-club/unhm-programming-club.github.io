@@ -106,8 +106,10 @@ class MenuTopicSection {
         }
         let val = localStorage.getItem(this.storageKey);
         if(val != null) {
-            this.selections[val].click();
-            this.selectionFunction(val);
+            if(this.names.includes(val)) {
+                this.selections[val].click();
+                this.selectionFunction(val);
+            }
         }
     }
     static createRadioElements(topic) {        
@@ -127,12 +129,6 @@ class MenuTopicSection {
             });
             topic.topicDiv.appendChild(newRadio);
             topic.topicDiv.appendChild(newLabel);
-        }
-
-        let val = localStorage.getItem(topic.storageKey);
-        if(val != null) {
-            topic.selections[val].click();
-            topic.selectionFunction(val);
         }
     }
     static createSelectElements(topic) {
