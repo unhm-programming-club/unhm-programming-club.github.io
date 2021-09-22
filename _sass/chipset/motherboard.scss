@@ -2,8 +2,17 @@
 
 $image-link: "../images/styles/chipset/";
 
+
+// .body-wrapper {
+//     background-image: url($image-link + "luis-mb.png");
+//     background-repeat:no-repeat;
+//     background-position-x: center;
+//     background-position-y: -200px;
+//     min-height: 1720px;
+// }
+
 //create motherboard image and position it
-.body-wrapper {
+body {
     background-image: url($image-link + "luis-mb.png");
     background-repeat:no-repeat;
     background-position-x: center;
@@ -11,16 +20,48 @@ $image-link: "../images/styles/chipset/";
     min-height: 1720px;
 }
 // give the content a transparent bg so the motherboard is visible
-.main-content, .site-footer {
+.main-content {
     background-color: rgba($color: #181818, $alpha: 0.9);
     border-top: 0px solid black;
 }
-// center the footer
+//fade the footer out
+.site-footer  {
+    border-top: 0px solid black;
+    background: linear-gradient(to bottom, #181818E6, #18181800);
+
+}
+// make the footer like a microchip
 .footer-wrapper {
     margin-left: auto;
     margin-right: auto;
+    background-color: #33424A;
+    background-image: url($image-link + 'microchip-texture.png');
+    border: 20px solid rgba($color: #000000, $alpha: 0);border-image-source: url($image-link + 'chip-border.png');
+    border-image-slice: 12 12;
+    border-width: 12px;
+    border-image-repeat: repeat;
+    padding-top: 10px;
+    background-clip: padding-box;
+    position: relative;
 }
-// get rid of extra border
+.footer-wrapper:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0);
+    z-index: -2;
+    display: block;
+    position: absolute;
+    left: 0; top: 0;
+    border-bottom: 4px solid gray;
+    border-right: 4px solid gray;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+// get rid of extra border, make a fade gradient on top
 .site-header {
     border-bottom: 0px solid black;
+    background: linear-gradient(to top, #181818E6, #18181800);
 }
