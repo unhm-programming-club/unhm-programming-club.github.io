@@ -1,0 +1,74 @@
+
+$image-link: "../images/styles/chipset/";
+
+// position the nav bar
+.site-nav {
+    background-color: rgba($color: #444444, $alpha: 0.2);
+    position: relative;
+    top: 410px;
+    width: 400px;
+    left: 30px;
+    display: flex;
+    line-height: 30px;
+}
+
+// arrange the buttons with flex style
+.site-nav input ~ .trigger {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+//style the page buttons as chips
+.site-nav .page-link {
+    color: #F9F9F9;
+    flex-direction:row;
+    flex-shrink: 0;
+    font-family: Verdana, Tahoma, Geneva, Tahoma, sans-serif;
+    font-variant: small-caps;
+    text-align: center;
+    border: 20px solid rgba($color: #000000, $alpha: 0);
+    border-image-source: url($image-link + 'chip-border.png');
+    border-image-slice: 12 12;
+    border-width: 12px;
+    border-image-repeat: repeat;
+    padding: 0px;
+    font-size: px;
+    letter-spacing: 0.5mm;
+}
+
+//style the inner part of the page buttons
+.page-link .page-link-inner {
+    background-color: #33424A;
+    background-image: url($image-link + 'microchip-texture.png');
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    padding-right: 7px;
+    padding-left: 7px;
+    border-bottom: 2px solid #37403E;
+    border-right: 2px solid #37403E;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.site-nav .page-link:not(:last-child) {
+    margin-right: 0px;
+}
+
+//increase the size of the banner to accomodate the nav bar
+// .site-header {
+//     height: 500px;
+// }
+
+// increase the padding of the content to include the buttons
+
+.main-content {
+    padding-top: 100px;
+}
+
+// style the active link
+.page-link.active-link {
+    color: #36ACFF;
+}

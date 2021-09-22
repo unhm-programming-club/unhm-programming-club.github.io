@@ -1,0 +1,26 @@
+// for the mother board bg
+
+$image-link: "../images/styles/chipset/";
+
+//create motherboard image and position it
+.body-wrapper {
+    background-image: url($image-link + "luis-mb.png");
+    background-repeat:no-repeat;
+    background-position-x: center;
+    background-position-y: -200px;
+    min-height: 1720px;
+}
+// give the content a transparent bg so the motherboard is visible
+.main-content, .site-footer {
+    background-color: rgba($color: #181818, $alpha: 0.9);
+    border-top: 0px solid black;
+}
+// center the footer
+.footer-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+// get rid of extra border
+.site-header {
+    border-bottom: 0px solid black;
+}

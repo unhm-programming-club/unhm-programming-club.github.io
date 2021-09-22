@@ -1,0 +1,82 @@
+//Image by <a href="https://pixabay.com/users/lrcfree-812646/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=683247">luis cornejo</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=683247">Pixabay</a>
+
+
+$image-link: "../images/styles/chipset/";
+
+
+// .site-header {
+// }
+
+// // mb background
+// .ribbon-outer {
+// }
+
+//minor chip position adjustments
+.ribbon-outer {
+    display:block;
+    margin-right: 50px;
+}
+// chip border
+.ribbon-inner {
+    display:block;
+	background-color: #1B2F2E;
+	border: 3px solid #1C5B52;
+    width: 405px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+}
+
+
+// head-wrapper becomes the chip itself
+.head-wrapper {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(99deg, rgba(169,168,166,1) 2%, rgba(181,181,181,1) 12%, rgba(170,170,170,1) 20%, rgba(163,161,157,1) 31%, rgba(174,173,171,1) 41%, rgba(158,157,155,1) 65%, rgba(161,160,157,1) 84%, rgba(136,131,127,1) 100%); 
+	border-radius: 7%;
+	border-bottom: 4px solid #727271;
+	border-right: 4px solid #7F817E;
+    box-sizing: border-box;
+}
+
+// https://css-tricks.com/fitting-text-to-a-container/
+
+// positions the main link in the 'chip'
+.head-wrapper .site-title {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding-left: 19%;
+    padding-right:14%;
+    padding-top: 14%;
+}
+
+// sizes font based on viewport width
+.site-title .title {
+    font-size: 26px;
+    line-height: 50px;
+    color: black;
+    font-family: Verdana, Tahoma, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    letter-spacing: 0.5mm;
+    font-variant: small-caps;
+    text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
+
+}
+
+//chip animation sheen
+.head-wrapper:hover {
+    animation: chipHover 4s ease infinite;
+}
+@keyframes chipHover {
+    0%{
+        background-size: 100%;
+    }
+    50%{
+        background-size: 200%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}

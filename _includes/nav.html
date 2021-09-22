@@ -1,6 +1,14 @@
 {% assign sorted_data = (site.data.navigation | sort: 'num') %}
 {% for item in sorted_data %}
-        <a class = "page-link" href ="{{ item.link }}" {% if page.url == item.link %} style="color: red;"{% endif %}>
-            {{ item.name }}
+
+        <a
+        {% if page.url == item.link %} 
+            class = "page-link active-link"
+        {% else %}
+            class="page-link"
+        {% endif %}
+        href ="{{ item.link }}"
+        >
+            <span class="page-link-inner">{{ item.name }}</span>
         </a>
 {% endfor %}
