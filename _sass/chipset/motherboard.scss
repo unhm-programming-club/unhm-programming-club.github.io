@@ -60,6 +60,17 @@ body {
 
 }
 
+.site-footer:after {
+    content: "Motherboard image credit: luis cornejo on Pixabay. Chip CSS by klm127";
+    font-size: 12px;
+    padding-top: 60px;
+    width: 400px;
+    height: 200px;
+    display: block;
+    color: #424242;
+    margin: auto;
+}
+
 // get rid of extra border, make a fade gradient on top
 .site-header {
     border-bottom: 0px solid black;
