@@ -14,7 +14,7 @@ The mission of the UNHM Programming Club is to provide members the opportunity t
 
 # Discord
 
-<span style="font-size:20px;">[Join the Programming Club Discord](https://discord.gg/mFVHDywz)</span>
+<span style="font-size:20px;">[Join the Programming Club Discord](https://discord.gg/k7EQKqUQXH)</span>
 
 ## Meetings
 
