@@ -44,7 +44,7 @@ tags: meeting-results
 - New Projects
 	- Davis moved the Java 11 game to the team repository. 
 	- Karl thinks we should consider making a game in Phaser 
-	
+ 
 ### Agenda Next Meeting 
 
 - Budget allocations
