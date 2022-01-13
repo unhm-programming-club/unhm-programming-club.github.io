@@ -6,6 +6,7 @@ author: Karl Miller
 tags: meeting-results robinhood-bot
 ---
 
+{% include programming_club_logo.html %}
 ### Attending
 
 - Karl Miller, President
