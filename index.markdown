@@ -18,4 +18,4 @@ The mission of the UNHM Programming Club is to provide members the opportunity t
 
 ## Meetings
 
-Fridays, 3:50 pm, on Discord
+Fridays, 6:30 pm, on Discord
