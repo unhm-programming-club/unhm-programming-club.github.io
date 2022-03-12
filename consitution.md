@@ -132,35 +132,23 @@ The mission of the UNHM Programming Club is to provide members the opportunity t
 
 ## Article IV - Officers
 
-The first officers of the club are:
+The officers of the club are:
 
- - Karl Miller, President
+ - Davis Moore, President
+  
+<p style="color:green;" class="vote-record">(elected 3/11/2022, 4-0)</p>
 
-<p style="color:green;" class="vote-record">(elected 3/20/2021, 5-0)</p>
+ - Tony Pion, Vice President
 
- - Davis Moore, Vice President,
+<p style="color:green;" class="vote-record">(elected 3/11/2022, 5-0)</p>
 
-<p style="color:green;" class="vote-record">(elected 3/27/2021, 7-0)</p>
+ - Kaitlin McManus, Secretary
+  
+<p style="color:green;" class="vote-record">(elected 3/11/2022, 5-0)</p>
 
- - Kaitlin McManus, Secretary,
-
-<p style="color:green;" class="vote-record">(elected 3/20/2021, 5-0)</p>
-
- - Adam Morvant, Discord Administrator,
-
-<p style="color:green;" class="vote-record">(elected 3/20/2021, 5-0)</p>
-
- - Bryan Robbins, Discord Administrator
-
-<p style="color:green;" class="vote-record">(elected 3/27/2021, 7-0)</p>
-
- - Anthony Clark, Quartermaster
- 
-<p style="color:green;" class="vote-record">(elected 4/25/2021, 5-0)</p>
-
- - Derek Santiago, Treasurer
-
-<p style="color:green;" class="vote-record">(elected 5/1/2021, 5-0)</p>
+ - Adam Morvant, Discord Administrator
+  
+<p style="color:green;" class="vote-record">(elected 3/11/2022, 4-0)</p>
 
 The first faculty advisor is Professor Mihaela Sabin.
 
